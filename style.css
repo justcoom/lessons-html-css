@@ -3,21 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
+    border: 3px solid red;
     font-style: normal;
     line-height: normal;
     font-family: Rubik, sans-serif;
+    min-width: 375px;
 }
 section{
     background: #eff2f9;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
 }
 .card{
     width: 1170px;
-    height: 800px;
+    min-height: 800px;
     box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
     background: #fff;
     padding: 60px 0 70px;
@@ -200,4 +203,62 @@ li.selected{
 
 .button:hover {
     transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1440px) {
+    .card {
+        width: 690px;
+        flex-direction: column;
+        margin: 40px;
+    }
+    
+    .product-image-block {
+        border-right: none;
+        border-bottom: 2px solid rgba(20, 20, 20, 0.15);
+    }
+
+    .previews-wrapper {
+        margin: 60px 0 70px;
+    }
+
+    .product-info-block {
+        padding-top: 60px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        margin: 15px;
+    }
+
+    .product-image-block {
+        min-width: auto;
+    }
+    
+    .main-image {
+        width: 250px;
+    }
+
+    .product-info-block {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-title {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+
+    .text {
+        font-size: 16px;
+        margin-bottom: 55px;
+    }
+
+    .button {
+        margin-top: 65px;
+    }
 }
